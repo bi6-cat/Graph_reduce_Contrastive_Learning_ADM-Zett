@@ -1,0 +1,64 @@
+INFO:core.data_engine.data_engine:File: 0
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.LD:Before prune: 52492 nodes - 107897 edges
+INFO:core.prune.LD:After pruned: 52492 nodes - 58177 edges
+INFO:core.data_engine.data_engine:Embedding... graph
+INFO:core.data_engine.data_engine:Saving... 
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_prune/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data_engine.data_engine:File: 1
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.LD:Before prune: 48644 nodes - 100846 edges
+INFO:core.prune.LD:After pruned: 48644 nodes - 55988 edges
+INFO:core.data_engine.data_engine:Embedding... graph
+INFO:core.data_engine.data_engine:Saving... 
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_prune/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data_engine.data_engine:File: 2
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.LD:Before prune: 51637 nodes - 122870 edges
+INFO:core.prune.LD:After pruned: 51637 nodes - 61836 edges
+INFO:core.data_engine.data_engine:Embedding... graph
+INFO:core.data_engine.data_engine:Saving... 
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_prune/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data_engine.data_engine:File: 3
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.LD:Before prune: 22308 nodes - 34071 edges
+INFO:core.prune.LD:After pruned: 22308 nodes - 22789 edges
+INFO:core.data_engine.data_engine:Embedding... graph
+INFO:core.data_engine.data_engine:Saving... 
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_prune/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data_engine.data_engine:File: 4
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.LD:Before prune: 29298 nodes - 66076 edges
+INFO:core.prune.LD:After pruned: 29298 nodes - 35139 edges
+INFO:core.data_engine.data_engine:Embedding... graph
+INFO:core.data_engine.data_engine:Saving... 
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_prune/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Saved graph to file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data_engine.data_engine:Avg number of nodes, edge:                      
+	 Original: 40875.8 nodes - 86352.0 edges                     
+	 Pruned: 34589.2 nodes - 46785.8 edges
+INFO:core.data_engine.data_engine:Completed process folder data_storage/raw/benign to: 
+	 fcg folder: data_storage/processed/fcg 
+	 fcg_prune folder: data_storage/processed/fcg_prune 
+	 fcg_embed folder: data_storage/processed/fcg_embedding 
+INFO:core.data_engine.data_engine:Saving... metric to file data_storage/processed/metrics/metrics.txt
+INFO:core.data_engine.data_engine:Completed Generate Dataset

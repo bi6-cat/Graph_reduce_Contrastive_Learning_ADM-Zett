@@ -1,0 +1,116 @@
+INFO:core.classify.classify_engine:Config classify: {
+    "run": true,
+    "algorithms": [
+        "MLP",
+        "RF",
+        "KNN",
+        "SVM",
+        "DT"
+    ],
+    "MLP": {
+        "input_size": 394,
+        "hidden_sizes": [
+            10,
+            20,
+            10
+        ],
+        "output_size": 2,
+        "device": "cpu",
+        "lr": 0.001,
+        "epochs": 5
+    },
+    "RF": {
+        "max_depth": 10,
+        "random_state": 42
+    },
+    "KNN": {
+        "n_neighbors": 1
+    },
+    "SVM": {
+        "kernel": "rbf"
+    },
+    "DT": {
+        "criterion": "gini"
+    }
+}
+INFO:core.classify.classify_engine:Loading object classify: ['MLP', 'RF', 'KNN', 'SVM', 'DT']
+INFO:core.classify.classify_engine:Loaded algorithm: MLP
+INFO:core.classify.classify_engine:Loaded algorithm: RF
+INFO:core.classify.classify_engine:Loaded algorithm: KNN
+INFO:core.classify.classify_engine:Loaded algorithm: SVM
+INFO:core.classify.classify_engine:Loaded algorithm: DT
+INFO:core.classify.classify_engine:Loaded object classify: ['MLP', 'RF', 'KNN', 'SVM', 'DT']
+INFO:core.classify.classify_engine:Loading train.pt, test.pt after combine from data_storage/processed/data_combine
+INFO:core.classify.classify_engine:Loaded train.pt, test.pt after combine
+INFO:core.classify.classify_engine:Classify with: MLP ----------------------------
+INFO:core.model.components.classify.modelMlp:Epoch [1/5], Loss: 0.6572
+INFO:core.model.components.classify.modelMlp:Epoch [2/5], Loss: 0.6565
+INFO:core.model.components.classify.modelMlp:Epoch [3/5], Loss: 0.6559
+INFO:core.model.components.classify.modelMlp:Epoch [4/5], Loss: 0.6552
+INFO:core.model.components.classify.modelMlp:Epoch [5/5], Loss: 0.6545
+INFO:core.classify.classify_engine:Trained model
+INFO:core.classify.classify_engine:Testing model with: MLP
+INFO:core.output.output:Metrics: 
+acc: 0.0
+f1: 0.0
+recall: 0.0
+precision: 0.0
+confusion: [[0 0]
+ [2 0]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.classify.classify_engine:Saved model `MLP` to file: experiments/hnaskd792hr79afh32r9ffcn/classify/MLP/model.pt
+INFO:core.classify.classify_engine:Classify with: RF ----------------------------
+INFO:core.classify.classify_engine:Trained model
+INFO:core.classify.classify_engine:Testing model with: RF
+INFO:core.output.output:Metrics: 
+acc: 0.0
+f1: 0.0
+recall: 0.0
+precision: 0.0
+confusion: [[0 0]
+ [2 0]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.classify.classify_engine:Saved model `RF` to file: experiments/hnaskd792hr79afh32r9ffcn/classify/RF/model.pt
+INFO:core.classify.classify_engine:Classify with: KNN ----------------------------
+INFO:core.classify.classify_engine:Trained model
+INFO:core.classify.classify_engine:Testing model with: KNN
+INFO:core.output.output:Metrics: 
+acc: 0.0
+f1: 0.0
+recall: 0.0
+precision: 0.0
+confusion: [[0 0]
+ [2 0]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.classify.classify_engine:Saved model `KNN` to file: experiments/hnaskd792hr79afh32r9ffcn/classify/KNN/model.pt
+INFO:core.classify.classify_engine:Classify with: SVM ----------------------------
+INFO:core.classify.classify_engine:Trained model
+INFO:core.classify.classify_engine:Testing model with: SVM
+INFO:core.output.output:Metrics: 
+acc: 0.0
+f1: 0.0
+recall: 0.0
+precision: 0.0
+confusion: [[0 0]
+ [2 0]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.classify.classify_engine:Saved model `SVM` to file: experiments/hnaskd792hr79afh32r9ffcn/classify/SVM/model.pt
+INFO:core.classify.classify_engine:Classify with: DT ----------------------------
+INFO:core.classify.classify_engine:Trained model
+INFO:core.classify.classify_engine:Testing model with: DT
+INFO:core.output.output:Metrics: 
+acc: 0.0
+f1: 0.0
+recall: 0.0
+precision: 0.0
+confusion: [[0 0]
+ [2 0]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.classify.classify_engine:Saved model `DT` to file: experiments/hnaskd792hr79afh32r9ffcn/classify/DT/model.pt
+INFO:core.classify.classify_engine:---------------------------------------
+            Ended classify with ['MLP', 'RF', 'KNN', 'SVM', 'DT']

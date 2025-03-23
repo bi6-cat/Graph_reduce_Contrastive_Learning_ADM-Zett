@@ -1,0 +1,45 @@
+INFO:core.gnn_embedding.gnn_engine:Config gnn embedding: 
+{
+    "device": "cuda",
+    "path_logging": "./logs/toolkit_gnn_embedding.log",
+    "model_checkpoint": "experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt",
+    "path_data": "data_storage/processed/fcg_embedding",
+    "length": 100,
+    "path_save_embedding": "data_storage/processed/gnn_embedding"
+}
+INFO:core.model.components.embedding.gnn:Init Graph Neural Network layers
+INFO:core.model.components.embedding.gnn:Init Pooling layer
+INFO:core.model.components.embedding.gnn:Init Fully connected layers
+INFO:core.model.components.embedding.gnn:Init Softmax layer
+INFO:core.gnn_embedding.gnn_engine:Gnn Embedding...
+INFO:core.gnn_embedding.gnn_engine:File: 0 - data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.gnn_embedding.gnn_engine:Embedded file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.utils.write_read_file:write successfully embed: 000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.pt
+INFO:core.gnn_embedding.gnn_engine:Saved file data_storage/processed/gnn_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.pt
+INFO:core.gnn_embedding.gnn_engine:File: 1 - data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.gnn_embedding.gnn_engine:Embedded file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.utils.write_read_file:write successfully embed: 001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.pt
+INFO:core.gnn_embedding.gnn_engine:Saved file data_storage/processed/gnn_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.pt
+INFO:core.gnn_embedding.gnn_engine:File: 2 - data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.gnn_embedding.gnn_engine:Embedded file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.utils.write_read_file:write successfully embed: 001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.pt
+INFO:core.gnn_embedding.gnn_engine:Saved file data_storage/processed/gnn_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.pt
+INFO:core.gnn_embedding.gnn_engine:File: 3 - data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.gnn_embedding.gnn_engine:Embedded file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.utils.write_read_file:write successfully embed: 0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.pt
+INFO:core.gnn_embedding.gnn_engine:Saved file data_storage/processed/gnn_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.pt
+INFO:core.gnn_embedding.gnn_engine:File: 4 - data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.gnn_embedding.gnn_engine:Embedded file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.utils.write_read_file:write successfully embed: 00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.pt
+INFO:core.gnn_embedding.gnn_engine:Saved file data_storage/processed/gnn_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.pt
+INFO:core.gnn_embedding.gnn_engine:Completed embedding gnn
+INFO:core.gnn_embedding.gnn_engine:
+                    Completed embedding gnn of fcg data:
+                    Location of data:
+                        	FCg folder: data_storage/processed/fcg_embedding
+                        	Emnedding folder: data_storage/processed/gnn_embedding

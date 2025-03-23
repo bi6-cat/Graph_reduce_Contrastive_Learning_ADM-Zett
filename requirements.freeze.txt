@@ -1,0 +1,14 @@
+# cpu: dgl==1.1.2
+# cuda: !pip install dgl==2.0.0 -f https://data.dgl.ai/wheels/cu121/repo.html
+androguard==3.4.0a1
+sentence-transformers
+# cpu: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# cuda: pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
+pandas
+numpy
+transformers
+omegaconf
+rootutils
+typer
+networkit
+loguru

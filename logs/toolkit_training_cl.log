@@ -1,0 +1,190 @@
+INFO:core.contrastive_learning.data.datamodulecl:Init DataModule Contrastive learning
+INFO:core.contrastive_learning.data.datamodulecl:Prepare dataset for datamodule CL
+INFO:core.contrastive_learning.data.datamodulecl:Create dataset training: anchor, positive, negative
+INFO:core.contrastive_learning.data.datamodulecl:Create dataset testing: anchor, positive, negative
+INFO:core.contrastive_learning.trainer_cl:Loaded dataset from data_storage/processed/csv/test.csv
+INFO:core.contrastive_learning.trainer_cl:Completed dataloader with batch size 1
+INFO:core.contrastive_learning.trainer_cl:Size of train - test: (5, 13)
+INFO:core.contrastive_learning.trainer_cl:Config trainer: 
+{
+    "device": "cuda",
+    "epochs": 2,
+    "log_interval": 1,
+    "contrastive_learing": {
+        "learning_rate": 0.005,
+        "margin": 0.5,
+        "path_logging": "logs/toolkit_training_cl.log",
+        "data": {
+            "csv_file": "data_storage/processed/csv/test.csv",
+            "batch_size": 2,
+            "train_test_ratio": 0.3
+        },
+        "project_layer": {
+            "in_feat": 10,
+            "fc_feats": [
+                10,
+                20,
+                10
+            ],
+            "outclass": 2
+        },
+        "type": "all",
+        "path_model_checkpoint": "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_cl.pt",
+        "path_save_model": "experiments/hnaskd792hr79afh32r9ffcn/model_contrastive_learning",
+        "path_save_metrics": "experiments/hnaskd792hr79afh32r9ffcn/metrics_contrastive_learing"
+    },
+    "path_logging": "logs/toolkit_training.log",
+    "learning_rate": 0.005,
+    "data": {
+        "csv_file": "data_storage/processed/csv/test.csv",
+        "batch_size": 1,
+        "train_test_ratio": 0.6
+    },
+    "model": {
+        "typemodel": "SAGE",
+        "features": "5_features",
+        "infeats": 5,
+        "gnn_feats": [
+            7,
+            10
+        ],
+        "fc_feats": [
+            10,
+            20,
+            10
+        ],
+        "outclass": 2
+    },
+    "path_model_checkpoint": "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_gnn.pt",
+    "path_save_model": "experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt",
+    "metrics": [
+        "acc",
+        "f1",
+        "recall",
+        "precision",
+        "confusion"
+    ],
+    "path_save_metrics": "experiments/hnaskd792hr79afh32r9ffcn/metrics_embedding"
+}
+INFO:core.contrastive_learning.trainer_cl:Loading... artchitecture model
+INFO:core.model.components.embedding.gnn:Init Graph Neural Network layers
+INFO:core.model.components.embedding.gnn:Init Pooling layer
+INFO:core.model.components.embedding.gnn:Init Fully connected layers
+INFO:core.model.components.embedding.gnn:Init Softmax layer
+INFO:core.contrastive_learning.model.model_cl:Init Fully connected layers
+INFO:core.contrastive_learning.trainer_cl:Loading... from model checkpoint:
+ experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_cl.pt
+INFO:core.contrastive_learning.trainer_cl:Training device: cuda
+INFO:core.contrastive_learning.trainer_cl:Training...
+INFO:core.contrastive_learning.trainer_cl:  0%|          | 0/2 [00:00<?, ?it/s]
+INFO:core.contrastive_learning.data.datamodulecl:Get train dataloader
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:Epoch 0, loss 0.4984
+INFO:core.contrastive_learning.trainer_cl: 50%|█████     | 1/2 [00:00<00:00,  1.98it/s]
+INFO:core.contrastive_learning.trainer_cl:Epoch 1, loss 0.0000
+INFO:core.contrastive_learning.trainer_cl:Saving... model to experiments/hnaskd792hr79afh32r9ffcn/model_contrastive_learning
+INFO:core.contrastive_learning.trainer_cl:Completed Training model with output:
+                        	Path to model: experiments/hnaskd792hr79afh32r9ffcn/model_contrastive_learning
+INFO:core.contrastive_learning.trainer_cl:Testing...
+INFO:core.contrastive_learning.trainer_cl:Testing device: cuda
+INFO:core.model.components.embedding.gnn:Init Graph Neural Network layers
+INFO:core.model.components.embedding.gnn:Init Pooling layer
+INFO:core.model.components.embedding.gnn:Init Fully connected layers
+INFO:core.model.components.embedding.gnn:Init Softmax layer
+INFO:core.contrastive_learning.model.model_cl:Init Fully connected layers
+INFO:core.contrastive_learning.trainer_cl:Loading... model from checkpoint: experiments/hnaskd792hr79afh32r9ffcn/model_contrastive_learning/model_cl.pt
+INFO:core.contrastive_learning.trainer_cl:Loaded model:
+ ModelModuleCL(
+  (gnn): ModelModule(
+    (gnn): SequentialGNN(
+      (gnn_1): SAGEConv(
+        (feat_drop): Dropout(p=0.0, inplace=False)
+        (fc_neigh): Linear(in_features=5, out_features=7, bias=False)
+        (fc_self): Linear(in_features=5, out_features=7, bias=True)
+      )
+      (gnn_relu_1): ReLU()
+      (gnn_2): SAGEConv(
+        (feat_drop): Dropout(p=0.0, inplace=False)
+        (fc_neigh): Linear(in_features=7, out_features=10, bias=False)
+        (fc_self): Linear(in_features=7, out_features=10, bias=True)
+      )
+    )
+    (pooling): MaxPooling()
+    (fc): Sequential(
+      (fc_1): Linear(in_features=10, out_features=10, bias=True)
+      (fc_relu_1): ReLU()
+      (fc_2): Linear(in_features=10, out_features=20, bias=True)
+      (fc_relu_2): ReLU()
+      (fc_3): Linear(in_features=20, out_features=10, bias=True)
+      (fc_relu_3): ReLU()
+      (fc_4): Linear(in_features=10, out_features=2, bias=True)
+    )
+    (softmax): Softmax(dim=1)
+  )
+  (fc): Sequential(
+    (fc_1): Linear(in_features=10, out_features=10, bias=True)
+    (fc_relu_1): ReLU()
+    (fc_2): Linear(in_features=10, out_features=20, bias=True)
+    (fc_relu_2): ReLU()
+    (fc_3): Linear(in_features=20, out_features=10, bias=True)
+    (fc_relu_3): ReLU()
+    (fc_4): Linear(in_features=10, out_features=2, bias=True)
+  )
+)
+INFO:core.contrastive_learning.data.datamodulecl:Get test dataloader
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:0it [00:00, ?it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:1it [00:00,  7.51it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.contrastive_learning.trainer_cl:2it [00:00,  7.53it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:3it [00:00,  7.24it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:4it [00:00,  7.56it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.contrastive_learning.trainer_cl:5it [00:00,  7.65it/s]
+INFO:core.contrastive_learning.trainer_cl:Shape Predictions: (12, 2)
+INFO:core.contrastive_learning.trainer_cl:Completed Testing model with output:
+                        	Path to metrics: experiments/hnaskd792hr79afh32r9ffcn/metrics_contrastive_learing

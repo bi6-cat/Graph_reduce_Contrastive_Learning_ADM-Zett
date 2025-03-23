@@ -1,0 +1,25 @@
+INFO:core.data_engine.data_engine:Config dataset: 
+{
+    "path_logging": "logs/toolkit_dataset.log",
+    "length": 100,
+    "prune": {
+        "algorithm": "scan",
+        "target_ratio": 0.2,
+        "api_file": "./data_storage/processed/sensitive_apis/sensitive_apis.txt",
+        "order": 2
+    },
+    "path_data": "data_storage/raw/benign",
+    "path_save_fcg": "data_storage/processed/fcg",
+    "path_save_fcg_prune": "data_storage/processed/fcg_prune",
+    "path_save_fcg_embedding": "data_storage/processed/fcg_embedding",
+    "cache_dir": "./cache",
+    "embedding_dim": 1,
+    "path_save_metrics": "data_storage/processed/metrics"
+}
+INFO:core.data_engine.data_engine:File: 0
+INFO:core.data_engine.data_engine:Converting... apk to graph
+INFO:core.data.apk_graph:Processing ... data_storage/raw/benign/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.apk
+INFO:core.data_engine.data_engine:Pruning... graph
+INFO:core.prune.components.scan:Before prune: 52492 nodes - 107897 edges
+INFO:core.prune.components.scan:After pruned: 52492 nodes - 23752 edges
+INFO:core.data_engine.data_engine:Embedding... graph

@@ -1,0 +1,43 @@
+INFO:core.permissions.permission_engine:Config Permission: 
+{
+    "path_logging": "./logs/toolkit_permission.log",
+    "path_data": "data_storage/raw/benign",
+    "length": 100,
+    "type": "llm",
+    "model_embeding": {
+        "cache_dir": "./cache",
+        "vocab_file_onehot": "./data_storage/processed/permission/vocab_onehot.txt",
+        "vocab_file_w2v": "data_storage/processed/permission/vocab_w2v.txt",
+        "vector_size": 100,
+        "epochs": 1
+    },
+    "path_save_text": "data_storage/processed/permission1/text",
+    "path_save_embedding": "data_storage/processed/permission1/embedding"
+}
+INFO:core.permissions.permission_engine:Encoding with type model: llm
+INFO:core.permissions.permission_engine:Start embedding permission
+INFO:core.permissions.utils.extract_apk_text:Processing... file data_storage/raw/benign/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.apk
+INFO:core.utils.write_read_file:write successfully text: 000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.txt
+INFO:core.permissions.permission_engine:Embedding... 
+INFO:core.utils.write_read_file:write successfully embed: 000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.pt
+INFO:core.permissions.utils.extract_apk_text:Processing... file data_storage/raw/benign/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.apk
+INFO:core.utils.write_read_file:write successfully text: 001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.txt
+INFO:core.permissions.permission_engine:Embedding... 
+INFO:core.utils.write_read_file:write successfully embed: 001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.pt
+INFO:core.permissions.utils.extract_apk_text:Processing... file data_storage/raw/benign/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.apk
+INFO:core.utils.write_read_file:write successfully text: 001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.txt
+INFO:core.permissions.permission_engine:Embedding... 
+INFO:core.utils.write_read_file:write successfully embed: 001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.pt
+INFO:core.permissions.utils.extract_apk_text:Processing... file data_storage/raw/benign/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.apk
+INFO:core.utils.write_read_file:write successfully text: 0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.txt
+INFO:core.permissions.permission_engine:Embedding... 
+INFO:core.utils.write_read_file:write successfully embed: 0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.pt
+INFO:core.permissions.utils.extract_apk_text:Processing... file data_storage/raw/benign/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.apk
+INFO:core.utils.write_read_file:write successfully text: 00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.txt
+INFO:core.permissions.permission_engine:Embedding... 
+INFO:core.utils.write_read_file:write successfully embed: 00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.pt
+INFO:core.permissions.permission_engine:
+                    Completed gen data text, embedding of the permission:
+                    Location of data:
+                        	Text folder: data_storage/processed/permission1/text
+                        	Emnedding folder: data_storage/processed/permission1/embedding

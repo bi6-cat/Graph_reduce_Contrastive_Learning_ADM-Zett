@@ -1,0 +1,141 @@
+seed: 1234
+
+dynamic:
+  name_experiment: "hnaskd792hr79afh32r9ffcn"
+    
+# Dataset config
+dataset:
+  path_logging: "logs/toolkit_dataset.log" 
+  length: 100
+  prune: 
+    algorithm: "scan" # "ld", "scan", "api"
+    # "ld", "scan"
+    target_ratio: 0.2
+    # "api"
+    api_file: "./data_storage/processed/sensitive_apis/sensitive_apis.txt"
+    order: 2
+  path_data: "data_storage/raw/benign"
+  path_save_fcg: "data_storage/processed/fcg"
+  path_save_fcg_prune: "data_storage/processed/fcg_prune"
+  path_save_fcg_embedding: "data_storage/processed/fcg_embedding"
+  cache_dir: "./cache"
+  embedding_dim: 1
+  path_save_metrics: "data_storage/processed/metrics"
+
+# Train engine config
+training:
+  device: "cuda" # 'cpu' | 'cuda' 
+  epochs: 2
+  log_interval: 1
+  contrastive_learing:    
+    learning_rate: 0.005
+    margin: 0.5
+    path_logging: "logs/toolkit_training_cl.log" 
+    data:
+      csv_file: "data_storage/processed/csv/test.csv"
+      batch_size: 2
+      train_test_ratio: 0.3
+    project_layer:
+      in_feat: 10
+      fc_feats: [10, 20, 10]
+      outclass: 2
+    type: "all" #  "all" | "full" | "gnn"
+    path_model_checkpoint: "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_cl.pt"
+    path_save_model: "experiments/{{name_experiment}}/model_contrastive_learning"    
+    path_save_metrics: "experiments/{{name_experiment}}/metrics_contrastive_learing"
+  path_logging: "logs/toolkit_training.log" 
+  learning_rate: 0.005
+  data:
+    csv_file: "data_storage/processed/csv/test.csv"
+    batch_size: 1
+    train_test_ratio: 0.6
+  model:
+    typemodel: "SAGE" # "GCN", "SAGE", "GAT", "TAG"
+    features: "5_features" # name of feature in graph
+    infeats: 5 # dependency by feature in data
+    gnn_feats: [7, 10]
+    fc_feats: [10, 20, 10]
+    outclass: 2
+  path_model_checkpoint: "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_gnn.pt"
+  path_save_model: "experiments/{{name_experiment}}/model_embedding/model.pt"
+  metrics:
+    - acc
+    - f1
+    - recall
+    - precision
+    - confusion
+  path_save_metrics: "experiments/{{name_experiment}}/metrics_embedding"
+
+# Gnn embedding
+gnn_embedding:
+  device: "cuda" # 'cpu' | 'cuda'
+  path_logging: "./logs/toolkit_gnn_embedding.log" 
+  model_checkpoint: "experiments/{{name_experiment}}/model_embedding/model.pt"  
+  path_data: "data_storage/processed/fcg_embedding"
+  length: 100
+  path_save_embedding: "data_storage/processed/gnn_embedding"
+
+# Permission
+permission:
+  path_logging: "./logs/toolkit_permission.log" 
+  path_data: "data_storage/raw/benign"
+  length: 100
+  type: "llm"
+  model_embeding:
+    # type: "llm"
+    cache_dir: "./cache"
+    # type: "onehot"
+    vocab_file_onehot: "./data_storage/processed/permission/vocab_onehot.txt"
+    # type: "w2v"
+    vocab_file_w2v: "data_storage/processed/permission/vocab_w2v.txt"
+    vector_size: 100
+    epochs: 1
+  path_save_text: "data_storage/processed/permission1/text"
+  path_save_embedding: "data_storage/processed/permission1/embedding"
+
+# Classify
+classify:
+  path_logging: "logs/toolkit_classify.log" 
+  
+  # data of classify
+  data:
+    reload: False
+    embedding:
+      - "gnn"
+      - "permission"
+    path_data_label_hash: "data_storage/processed/json/label.json"
+    length: 100
+    path_data_gnn: "data_storage/processed/gnn_embedding"
+    path_data_permission: "data_storage/processed/permission/embedding"
+    combine_algorithm: "concat" # 'attention'
+    train_test_ratio: 0.6    
+    path_save_data_combine: "data_storage/processed/data_combine"
+  
+  # classify with algorithms
+  classify_algorithm:
+    run: True
+    algorithms: ["MLP", "RF", "KNN", "SVM", "DT"] # "MLP", "RF", "KNN", "SVM", "DT"
+    MLP:
+      input_size: 394
+      hidden_sizes: [10, 20, 10]
+      output_size: 2
+      device: "cpu"
+      lr: 0.001
+      epochs: 5
+    RF:
+      max_depth: 10
+      random_state: 42
+    KNN:
+      n_neighbors: 1
+    SVM:
+      kernel: 'rbf'
+    DT:
+      criterion: 'gini'
+  metrics:
+    - acc
+    - f1
+    - recall
+    - precision
+    - confusion
+  path_to_save_experiment: "experiments/{{name_experiment}}/classify"
+  

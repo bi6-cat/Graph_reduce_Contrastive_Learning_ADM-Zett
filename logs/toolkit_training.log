@@ -1,0 +1,154 @@
+INFO:core.trainer.trainer:Loaded dataset from data_storage/processed/csv/test.csv
+INFO:core.trainer.trainer:Completed dataloader with batch size 1
+INFO:core.trainer.trainer:Size of train - test: (10, 8)
+INFO:core.trainer.trainer:Config trainer: 
+{
+    "device": "cuda",
+    "epochs": 2,
+    "log_interval": 1,
+    "contrastive_learing": {
+        "learning_rate": 0.005,
+        "margin": 0.5,
+        "path_logging": "logs/toolkit_training_cl.log",
+        "data": {
+            "csv_file": "data_storage/processed/csv/test.csv",
+            "batch_size": 2,
+            "train_test_ratio": 0.3
+        },
+        "project_layer": {
+            "in_feat": 10,
+            "fc_feats": [
+                10,
+                20,
+                10
+            ],
+            "outclass": 2
+        },
+        "type": "all",
+        "path_model_checkpoint": "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_cl.pt",
+        "path_save_model": "experiments/hnaskd792hr79afh32r9ffcn/model_contrastive_learning",
+        "path_save_metrics": "experiments/hnaskd792hr79afh32r9ffcn/metrics_contrastive_learing"
+    },
+    "path_logging": "logs/toolkit_training.log",
+    "learning_rate": 0.005,
+    "data": {
+        "csv_file": "data_storage/processed/csv/test.csv",
+        "batch_size": 1,
+        "train_test_ratio": 0.6
+    },
+    "model": {
+        "typemodel": "SAGE",
+        "features": "5_features",
+        "infeats": 5,
+        "gnn_feats": [
+            7,
+            10
+        ],
+        "fc_feats": [
+            10,
+            20,
+            10
+        ],
+        "outclass": 2
+    },
+    "path_model_checkpoint": "experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_gnn.pt",
+    "path_save_model": "experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt",
+    "metrics": [
+        "acc",
+        "f1",
+        "recall",
+        "precision",
+        "confusion"
+    ],
+    "path_save_metrics": "experiments/hnaskd792hr79afh32r9ffcn/metrics_embedding"
+}
+INFO:core.trainer.trainer:Loading... artchitecture model
+INFO:core.model.components.embedding.gnn:Init Graph Neural Network layers
+INFO:core.model.components.embedding.gnn:Init Pooling layer
+INFO:core.model.components.embedding.gnn:Init Fully connected layers
+INFO:core.model.components.embedding.gnn:Init Softmax layer
+INFO:core.trainer.trainer:Loading... from model checkpoint:
+ experiments/bajshdbf7aserh29u20r34234554/model_contrastive_learning/model_gnn.pt
+INFO:core.trainer.trainer:Training device: cuda
+INFO:core.trainer.trainer:Training...
+INFO:core.trainer.trainer:  0%|          | 0/2 [00:00<?, ?it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/0018F2961C34905D09DD58A93F546B04274E1F97163ACF1E1B293690997B331F.fcg
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:Epoch 0, loss 0.6999
+INFO:core.trainer.trainer: 50%|█████     | 1/2 [00:00<00:00,  2.37it/s]
+INFO:core.trainer.trainer:Epoch 1, loss 0.0000
+INFO:core.trainer.trainer:Saving... model to experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt
+INFO:core.trainer.trainer:Completed Training model with output:
+                        	Path to model: experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt
+INFO:core.trainer.trainer:Testing...
+INFO:core.trainer.trainer:Testing device: cuda
+INFO:core.model.components.embedding.gnn:Init Graph Neural Network layers
+INFO:core.model.components.embedding.gnn:Init Pooling layer
+INFO:core.model.components.embedding.gnn:Init Fully connected layers
+INFO:core.model.components.embedding.gnn:Init Softmax layer
+INFO:core.trainer.trainer:Loading... model from checkpoint: experiments/hnaskd792hr79afh32r9ffcn/model_embedding/model.pt
+INFO:core.trainer.trainer:Loaded model:
+ ModelModule(
+  (gnn): SequentialGNN(
+    (gnn_1): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_neigh): Linear(in_features=5, out_features=7, bias=False)
+      (fc_self): Linear(in_features=5, out_features=7, bias=True)
+    )
+    (gnn_relu_1): ReLU()
+    (gnn_2): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_neigh): Linear(in_features=7, out_features=10, bias=False)
+      (fc_self): Linear(in_features=7, out_features=10, bias=True)
+    )
+  )
+  (pooling): MaxPooling()
+  (fc): Sequential(
+    (fc_1): Linear(in_features=10, out_features=10, bias=True)
+    (fc_relu_1): ReLU()
+    (fc_2): Linear(in_features=10, out_features=20, bias=True)
+    (fc_relu_2): ReLU()
+    (fc_3): Linear(in_features=20, out_features=10, bias=True)
+    (fc_relu_3): ReLU()
+    (fc_4): Linear(in_features=10, out_features=2, bias=True)
+  )
+  (softmax): Softmax(dim=1)
+)
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:0it [00:00, ?it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001FF8CC8DD5424457A53494A8D53FBCE4011A284C7FB1ECC279E48CDAE15D84.fcg
+INFO:core.trainer.trainer:1it [00:00,  7.58it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/001A76B481B894520582735D8375CF7C54049DA425508D3C68A198DCDB4EEC73.fcg
+INFO:core.trainer.trainer:2it [00:00,  7.26it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:3it [00:00,  7.93it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:4it [00:00,  8.36it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:5it [00:00,  8.67it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/000E54089D5600FBC51F5DC49FA9DEEF25CDBF2FB97F41F42E49D94B3A9054B9.fcg
+INFO:core.trainer.trainer:6it [00:00,  8.86it/s]
+INFO:core.data.checkpoint_graph:Loaded graph from file data_storage/processed/fcg_embedding/00207D3B4988E6AD2152854B8E84095511CDF4C268ED9D428EF152758F30EB85.fcg
+INFO:core.trainer.trainer:7it [00:00,  8.88it/s]
+INFO:core.trainer.trainer:Ground trust: [1, 1, 0, 1, 0, 0, 0, 1]
+INFO:core.trainer.trainer:Predictions: [1, 1, 1, 1, 1, 1, 1, 1]
+INFO:core.trainer.trainer:Saving... resulft to experiments/hnaskd792hr79afh32r9ffcn/metrics_embedding
+INFO:core.output.output:Metrics: 
+acc: 0.5
+f1: 0.6667
+recall: 1.0
+precision: 0.5
+confusion: [[0 4]
+ [0 4]]
+
+INFO:core.utils.write_read_file:write successfully text: metrics.txt
+INFO:core.trainer.trainer:Completed Testing model with output:
+                        	Path to model: experiments/hnaskd792hr79afh32r9ffcn/metrics_embedding
